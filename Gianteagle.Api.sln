@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gianteagle.Api", "Gianteagle.Api\Gianteagle.Api.csproj", "{B226C66C-41BD-43E9-8789-4BD0C19A4427}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B226C66C-41BD-43E9-8789-4BD0C19A4427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B226C66C-41BD-43E9-8789-4BD0C19A4427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B226C66C-41BD-43E9-8789-4BD0C19A4427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B226C66C-41BD-43E9-8789-4BD0C19A4427}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F9B31BF-F12F-450A-8D12-8E1D605F3B17}
+	EndGlobalSection
+EndGlobal
