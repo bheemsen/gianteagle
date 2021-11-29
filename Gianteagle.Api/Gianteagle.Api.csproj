@@ -1,7 +1,22 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Gianteagle.BAL\Gianteagle.BAL.csproj" />
+    <ProjectReference Include="..\Gianteagle.DTO\Gianteagle.DTO.csproj" />
+    <ProjectReference Include="..\Gianteagle.IoC\Gianteagle.IoC.csproj" />
+    <ProjectReference Include="..\Gianteagle.Utilities\Gianteagle.Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="logs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
 
 </Project>
