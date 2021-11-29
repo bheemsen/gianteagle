@@ -19,10 +19,18 @@ namespace Gianteagle.Api.Controllers
             this.productService = iproductService;
         }
         [HttpGet]
-        [Route("GetProduct")]
-        public Product GetProduct(long upcCode)
+        [Route("GetProduct/{upcCode}")]
+        public IActionResult GetProduct(long upcCode)
         {
-            return this.productService.GetProduct(upcCode);
+            var product = this.productService.GetProduct(upcCode);
+            if (product != null)
+            {
+                return Ok(product);
+            }
+            else
+            {
+                return NotFound($"Product with UPC code {upcCode} does not exists");
+            }
         }
         [HttpGet]
         [Route("GetProducts")]
