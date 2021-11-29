@@ -22,6 +22,9 @@ namespace Gianteagle.BAL.Services
         }
         public Product GetProduct(long upcCode)
         {
+            if (products.Count <= 0)
+                FillProducts();
+
             return products.FirstOrDefault(p => p.UPC == upcCode);
         }
 
@@ -103,10 +106,10 @@ namespace Gianteagle.BAL.Services
             });
             return products;
         }
-        
+
         public void RefreshProducts()
         {
-            
+
             products = new List<Product>();
         }
     }
