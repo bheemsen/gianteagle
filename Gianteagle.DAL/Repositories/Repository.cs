@@ -20,14 +20,13 @@ namespace Gianteagle.DAL.Repositories
         public TEntity Add(TEntity entity)
         {
             _DbContext.Add(entity);
-            
+
             return entity;
         }
 
         public List<TEntity> AddRange(List<TEntity> entity)
         {
             _DbContext.AddRange(entity);
-            _DbContext.SaveChanges();
             return entity;
         }
 
@@ -50,28 +49,24 @@ namespace Gianteagle.DAL.Repositories
         public TEntity Update(TEntity entity)
         {
             var updatedEntry = _DbContext.Update(entity);
-            _DbContext.SaveChanges();
             return entity;
         }
 
         public List<TEntity> UpdateRange(List<TEntity> entity)
         {
             _DbContext.UpdateRange(entity);
-            _DbContext.SaveChanges();
             return entity;
         }
 
         public async Task<TEntity> AddAsync(TEntity entity)
         {
             await _DbContext.AddAsync(entity);
-            await _DbContext.SaveChangesAsync();
             return entity;
         }
 
         public async Task<List<TEntity>> AddRangeAsync(List<TEntity> entity)
         {
             await _DbContext.AddRangeAsync(entity);
-            await _DbContext.SaveChangesAsync();
             return entity;
         }
 
@@ -94,14 +89,12 @@ namespace Gianteagle.DAL.Repositories
         public async Task<TEntity> UpdateAsync(TEntity entity)
         {
             var updatedEntry = _DbContext.Update(entity);
-            await _DbContext.SaveChangesAsync();
             return entity;
         }
 
         public async Task<List<TEntity>> UpdateRangeAsync(List<TEntity> entity)
         {
             _DbContext.UpdateRange(entity);
-            await _DbContext.SaveChangesAsync();
             return entity;
         }
 

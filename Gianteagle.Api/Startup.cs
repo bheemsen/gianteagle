@@ -14,16 +14,17 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Gianteagle.Api.Filters;
 
 namespace Gianteagle.Api
 {
     public class Startup
     {
-        
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            
+
         }
 
         public IConfiguration Configuration { get; }
@@ -33,7 +34,10 @@ namespace Gianteagle.Api
         {
             var a = Configuration.GetValue<string>("DatFilePath");
 
-            services.AddControllers();
+            services.AddControllers(config =>
+            {
+                config.Filters.Add(new CustomActionFilter());
+            });
             services.AddSwaggerGen();
             var dependencyInjector = new DependencyInjector(Configuration);
             dependencyInjector.InjectDependencies(services);
