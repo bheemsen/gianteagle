@@ -5,7 +5,8 @@ Asp.net Core Web API Project
 ## Setup
 
 - You can change connection string from *appsettings.json* within *Gianteagle.Api*
-- All database operation are in Gianteagle.DAL
+- All database operation are in Gianteagle.
+- It will create LOG folder and for each date it will have text log file.
  
 ## Layers
 
